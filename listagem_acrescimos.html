@@ -1,0 +1,378 @@
+<center>
+	<h3>Listagem de Acréscimos</h3>
+	<table class="JTable  table-nonfluid">
+		<tbody>
+			<tr class="rowodd" onmouseover="javascript:this.className='rowodd-hi'" onmouseout="javascript:this.className='rowodd'">
+				<td colspan="5" bgcolor="#FFFFFF" align="center">
+					<script>
+form_submitted = false;
+ form_submitted_keep = false
+</script>
+					<form name="NavigationTable" action="sel_acrescimo.php" method="POST" onsubmit="return NavigationTableSubmit()" target="_self" enctype="multipart/form-data">
+						<input class="f_NavigationTable_submitted" id="184409277" type="hidden" name="f_NavigationTable_submitted" value="1">
+							<table class="JTable  table-nonfluid" width="100%">
+								<tbody>
+									<tr class="rowodd" onmouseover="javascript:this.className='rowodd'" onmouseout="javascript:this.className='rowodd'">
+										<td align="center">
+											<ul align="center" width="50%" class="pagination pagination-sm">
+												<li class="disabled">
+													<a href="javascript:void(0);"> &lt;&lt; </a>
+												</li>
+												<li class="disabled">
+													<a href="javascript:void(0);"> &lt; </a>
+												</li>
+												<li class="active">
+													<a href="javascript:void(0);">1<span class="sr-only">(current)</span>
+													</a>
+												</li>
+												<li class="disabled">
+													<a href="javascript:void(0);"> &gt; </a>
+												</li>
+												<li class="disabled">
+													<a href="javascript:void(0);"> &gt;&gt; </a>
+												</li>
+											</ul>
+											<div style="color:#428bca;">1 à 9 de 9</div>
+										</td>
+										<td style="vertical-align:middle;">
+											<select class="btn btn-primary btn-xs" id="2" name="f_limit" size="1" onchange="ChangeRecordLimit(this, 'NavigationTable'); " onkeydown="return submitOnEnterEvent(this.id, event); ">
+												<option value="10" selected="">10</option>
+												<option value="20">20</option>
+												<option value="30">30</option>
+												<option value="40">40</option>
+												<option value="50">50</option>
+											</select>
+										</td>
+										<td align="center">
+											<a href="javascript:void(0);">
+												<div class="fa fa-file-excel-o glyphicon" id="bt_gerar_relatorio_filter" title="Gerar XLS Simplificado"/>
+											</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<script>
+function NavigationTableSubmit()
+{
+
+      var errorRow = $('#NavigationTable-filter-error');
+
+      form_submitted = true;
+      ok = true;
+
+      try {
+        
+        errorRow.hide();
+      } catch (e) {
+        errorRow.children().html(e);
+        errorRow.show();
+        ok = false;
+      }
+
+      if (eval('document.NavigationTable.f_action') != undefined)
+      {
+        if (document.NavigationTable.f_action.length == 2)
+        {
+          if (document.NavigationTable.f_action[1].checked)
+          {
+            return true;
+          }
+        }
+      }
+      if (!ok){ form_submitted = false; return false; }
+
+  if (ok) { return true; }
+} 
+
+</script>
+						</form>
+					</td>
+				</tr>
+				<tr class="roweven" onmouseover="javascript:this.className='roweven-hi'" onmouseout="javascript:this.className='roweven'">
+					<th align="center">
+						<a href="/sel_acrescimo.php?f_order_acrescimo=cd_acrescimo&amp;ascDesc=asc">Código</a>
+					</th>
+					<th align="center">
+						<a href="/sel_acrescimo.php?f_order_acrescimo=nm_acrescimo&amp;ascDesc=asc">Acréscimo</a>
+					</th>
+					<th align="center">
+						<a href="/sel_acrescimo.php?f_order_acrescimo=nr_ordem&amp;ascDesc=asc">Ordem</a>
+					</th>
+					<th align="center">
+						<a href="/sel_acrescimo.php?f_order_acrescimo=id_calculo&amp;ascDesc=asc">Cálculo</a>
+					</th>
+					<th align="center"> </th>
+				</tr>
+				<tr class="rowodd" onmouseover="javascript:this.className='rowodd-hi'" onmouseout="javascript:this.className='rowodd'">
+					<td align="" class="table-grid-td">
+1
+</td>
+					<td align="" class="table-grid-td">
+ACRESCIMO FINANCEIRO
+</td>
+					<td align="center" class="table-grid-td">
+2
+</td>
+					<td align="" class="table-grid-td">
+Diferença Prazo
+</td>
+					<td align="center">
+						<a href="man_acrescimo.php?&amp;f_cd_acrescimo=1">
+							<div class="fa fa-pencil-square-o glyphicon" style="font-size: 19px; " title="Editar"/>
+						</a>
+					</td>
+				</tr>
+				<tr class="roweven" onmouseover="javascript:this.className='roweven-hi'" onmouseout="javascript:this.className='roweven'">
+					<td align="" class="table-grid-td">
+31
+</td>
+					<td align="" class="table-grid-td">
+ACRESCIMO INDEXADOR DF
+</td>
+					<td align="center" class="table-grid-td">
+1
+</td>
+					<td align="" class="table-grid-td">
+Integral
+</td>
+					<td align="center">
+						<a href="man_acrescimo.php?&amp;f_cd_acrescimo=31">
+							<div class="fa fa-pencil-square-o glyphicon" style="font-size: 19px; " title="Editar"/>
+						</a>
+					</td>
+				</tr>
+				<tr class="rowodd" onmouseover="javascript:this.className='rowodd-hi'" onmouseout="javascript:this.className='rowodd'">
+					<td align="" class="table-grid-td">
+32
+</td>
+					<td align="" class="table-grid-td">
+ACRESCIMO INDEXADOR DG
+</td>
+					<td align="center" class="table-grid-td">
+2
+</td>
+					<td align="" class="table-grid-td">
+Integral
+</td>
+					<td align="center">
+						<a href="man_acrescimo.php?&amp;f_cd_acrescimo=32">
+							<div class="fa fa-pencil-square-o glyphicon" style="font-size: 19px; " title="Editar"/>
+						</a>
+					</td>
+				</tr>
+				<tr class="roweven" onmouseover="javascript:this.className='roweven-hi'" onmouseout="javascript:this.className='roweven'">
+					<td align="" class="table-grid-td">
+2
+</td>
+					<td align="" class="table-grid-td">
+OVER PRICE
+</td>
+					<td align="center" class="table-grid-td">
+1
+</td>
+					<td align="" class="table-grid-td">
+Integral
+</td>
+					<td align="center">
+						<a href="man_acrescimo.php?&amp;f_cd_acrescimo=2">
+							<div class="fa fa-pencil-square-o glyphicon" style="font-size: 19px; " title="Editar"/>
+						</a>
+					</td>
+				</tr>
+				<tr class="rowodd" onmouseover="javascript:this.className='rowodd-hi'" onmouseout="javascript:this.className='rowodd'">
+					<td align="" class="table-grid-td">
+5
+</td>
+					<td align="" class="table-grid-td">
+OVER PRICE FORNECEDOR
+</td>
+					<td align="center" class="table-grid-td">
+1
+</td>
+					<td align="" class="table-grid-td">
+Integral
+</td>
+					<td align="center">
+						<a href="man_acrescimo.php?&amp;f_cd_acrescimo=5">
+							<div class="fa fa-pencil-square-o glyphicon" style="font-size: 19px; " title="Editar"/>
+						</a>
+					</td>
+				</tr>
+				<tr class="roweven" onmouseover="javascript:this.className='roweven-hi'" onmouseout="javascript:this.className='roweven'">
+					<td align="" class="table-grid-td">
+7
+</td>
+					<td align="" class="table-grid-td">
+OVER PRICE LOGISTICA
+</td>
+					<td align="center" class="table-grid-td">
+1
+</td>
+					<td align="" class="table-grid-td">
+Integral
+</td>
+					<td align="center">
+						<a href="man_acrescimo.php?&amp;f_cd_acrescimo=7">
+							<div class="fa fa-pencil-square-o glyphicon" style="font-size: 19px; " title="Editar"/>
+						</a>
+					</td>
+				</tr>
+				<tr class="rowodd" onmouseover="javascript:this.className='rowodd-hi'" onmouseout="javascript:this.className='rowodd'">
+					<td align="" class="table-grid-td">
+3
+</td>
+					<td align="" class="table-grid-td">
+TAXA ACORDO COMERCIAL
+</td>
+					<td align="center" class="table-grid-td">
+5
+</td>
+					<td align="" class="table-grid-td">
+Integral
+</td>
+					<td align="center">
+						<a href="man_acrescimo.php?&amp;f_cd_acrescimo=3">
+							<div class="fa fa-pencil-square-o glyphicon" style="font-size: 19px; " title="Editar"/>
+						</a>
+					</td>
+				</tr>
+				<tr class="roweven" onmouseover="javascript:this.className='roweven-hi'" onmouseout="javascript:this.className='roweven'">
+					<td align="" class="table-grid-td">
+6
+</td>
+					<td align="" class="table-grid-td">
+TAXA DE ATRASO
+</td>
+					<td align="center" class="table-grid-td">
+3
+</td>
+					<td align="" class="table-grid-td">
+Diferença Prazo
+</td>
+					<td align="center">
+						<a href="man_acrescimo.php?&amp;f_cd_acrescimo=6">
+							<div class="fa fa-pencil-square-o glyphicon" style="font-size: 19px; " title="Editar"/>
+						</a>
+					</td>
+				</tr>
+				<tr class="rowodd" onmouseover="javascript:this.className='rowodd-hi'" onmouseout="javascript:this.className='rowodd'">
+					<td align="" class="table-grid-td">
+4
+</td>
+					<td align="" class="table-grid-td">
+VENDA CPF / CNPJ ISENTO
+</td>
+					<td align="center" class="table-grid-td">
+4
+</td>
+					<td align="" class="table-grid-td">
+Integral
+</td>
+					<td align="center">
+						<a href="man_acrescimo.php?&amp;f_cd_acrescimo=4">
+							<div class="fa fa-pencil-square-o glyphicon" style="font-size: 19px; " title="Editar"/>
+						</a>
+					</td>
+				</tr>
+				<tr class="roweven" onmouseover="javascript:this.className='roweven-hi'" onmouseout="javascript:this.className='roweven'">
+					<td colspan="5" bgcolor="#FFFFFF" align="center">
+						<script>
+form_submitted = false;
+ form_submitted_keep = false
+</script>
+						<form name="filter_acrescimo" action="/sel_acrescimo.php" method="POST" onsubmit="return filter_acrescimoSubmit()" target="_self" enctype="multipart/form-data">
+							<input class="f_filter_acrescimo_submitted" id="523718426" type="hidden" name="f_filter_acrescimo_submitted" value="1">
+								<table class="JTable  table-nonfluid" width="100%">
+									<tbody>
+										<tr class="rowodd_filter" onmouseover="javascript:this.className='rowodd_filter'" onmouseout="javascript:this.className='rowodd_filter'">
+											<td>
+Acréscimo
+</td>
+											<td>
+												<input class="f_acrescimo_nm_acrescimo" id="3" type="text" name="f_acrescimo_nm_acrescimo" value="" size="40" onkeypress="return rm_double_spaces(event, this, '[\ ]{2,}'); ">
+</td>
+											</tr>
+											<tr class="roweven_filter" onmouseover="javascript:this.className='roweven_filter'" onmouseout="javascript:this.className='roweven_filter'">
+												<th colspan="2" align="center">
+													<input class="f_submit_filter" id="4" type="submit" name="f_submit_filter" value="Filtrar" onclick="javascript: form_submitted_keep = form_submitted;">
+														<input class="f_reset_filter" id="5" type="button" name="f_reset_filter" value="Limpar" onclick="void(form_submitted_keep = form_submitted); resetDefaultValues(this.form); ">
+															<input class="f_limit" id="6" type="hidden" name="f_limit" value="10">
+</th>
+														</tr>
+														<tr id="filter_acrescimo-filter-error" style="display:none;" align="center" class="rowodd_filter" onmouseover="javascript:this.className='rowodd_filter'" onmouseout="javascript:this.className='rowodd_filter'">
+															<td colspan="2" class="alert-danger">
+</td>
+														</tr>
+													</tbody>
+												</table>
+												<script>
+function filter_acrescimoSubmit()
+{
+
+      var errorRow = $('#filter_acrescimo-filter-error');
+
+      form_submitted = true;
+      ok = true;
+
+      try {
+        
+        errorRow.hide();
+      } catch (e) {
+        errorRow.children().html(e);
+        errorRow.show();
+        ok = false;
+      }
+
+      if (eval('document.filter_acrescimo.f_action') != undefined)
+      {
+        if (document.filter_acrescimo.f_action.length == 2)
+        {
+          if (document.filter_acrescimo.f_action[1].checked)
+          {
+            return true;
+          }
+        }
+      }
+      if (typeof document.filter_acrescimo.f_acrescimo_nm_acrescimo != 'undefined'){
+    f_acrescimo_nm_acrescimo_value = document.filter_acrescimo.f_acrescimo_nm_acrescimo.value;
+    while (f_acrescimo_nm_acrescimo_value.substr(0, 1) == '(' && f_acrescimo_nm_acrescimo_value.substr(f_acrescimo_nm_acrescimo_value.length-1, 1) == ')')
+      f_acrescimo_nm_acrescimo_value = f_acrescimo_nm_acrescimo_value.substring(1, f_acrescimo_nm_acrescimo_value.length-1);
+    document.filter_acrescimo.f_acrescimo_nm_acrescimo.value = f_acrescimo_nm_acrescimo_value;
+  }
+  if (!ok){ form_submitted = false; return false; }
+
+  if (!ok){ form_submitted = false; return false; }
+
+  if (!ok){ form_submitted = false; return false; }
+
+  if (!ok){ form_submitted = false; return false; }
+
+  if (ok) { return true; }
+} 
+
+</script>
+												<script>
+document.filter_acrescimo.f_acrescimo_nm_acrescimo && document.filter_acrescimo.f_acrescimo_nm_acrescimo.focus();
+</script>
+											</form>
+										</td>
+									</tr>
+									<tr class="rowodd" onmouseover="javascript:this.className='rowodd-hi'" onmouseout="javascript:this.className='rowodd'">
+										<td colspan="5" bgcolor="#efefef">
+											<table class="JTable  table-nonfluid" width="100%">
+												<tbody>
+													<tr class="rowodd" onmouseover="javascript:this.className='rowodd-hi'" onmouseout="javascript:this.className='rowodd'">
+														<th width="20%">Status:</th>
+														<td align="left" valign="center">
+&nbsp;
+</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<br>
+								<a href="man_acrescimo.php">Adicionar Acréscimo</a>
+							</center>
